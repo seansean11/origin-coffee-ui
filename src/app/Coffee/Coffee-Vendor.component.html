@@ -1,0 +1,77 @@
+<div class="modal fade" id="addTradeModal" tabindex="-1" role="dialog" aria-labelledby="addTradeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="addTradeModalLabel">Trade Coffee</h4>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+          <div class="form-group text-left">
+            <label for="newOwner">new owner</label>
+            <textarea [ngModel]="newOwner" formControlName="newOwner" class="form-control" rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button (click)="addTrade(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    <strong>Error:</strong> {{errorMessage}}
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="thead">
+          <tr class="thead-cols">
+
+            <th class="info">coffeeId</th>
+
+            <th class="info">pounds</th>
+
+            <th class="info">organic</th>
+
+            <th class="info">harvestedAt</th>
+
+            <th class="info">variety</th>
+
+            <th class="info">owner</th>
+
+            <th class="info">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of allAssets">
+
+
+            <td>{{asset.coffeeId}}</td>
+
+            <td>{{asset.pounds}}</td>
+
+            <td>{{asset.organic}}</td>
+
+            <td>{{asset.harvestedAt}}</td>
+
+            <td>{{asset.variety}}</td>
+
+            <td>{{asset.owner}}</td>
+
+            <td>
+              <button (click)="getForm(asset.coffeeId);" type="button" class="btn btn-success" data-toggle="modal" data-target="#addTradeModal">Transfer Ownership</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

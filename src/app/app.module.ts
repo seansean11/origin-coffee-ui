@@ -3,22 +3,23 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { Configuration }     from './configuration';
-import { DataService }     from './data.service';
+import { Configuration } from './configuration';
+import { DataService } from './data.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-// import { TransactionComponent } from './Transaction/Transaction.component'
-
-import { CoffeeComponent } from './Coffee/Coffee.component';
+import { CoopComponent } from './coop/coop.component';
+import { VendorComponent } from './vendor/vendor.component'
+import { CoffeeFarmerComponent } from './Coffee/Coffee-farmer.component';
+import { CoffeeVendorComponent } from './Coffee/Coffee-vendor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-		HomeComponent,
-    // TransactionComponent,
-    
-    CoffeeComponent
-		
+    HomeComponent,
+    CoopComponent,
+    VendorComponent,
+    CoffeeFarmerComponent,
+    CoffeeVendorComponent
   ],
   imports: [
     BrowserModule,

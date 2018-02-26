@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #fffffe;
+}
+
+.hero {
+  padding: 3em 1em;
+  margin-bottom: 2em;
+  color: #fff;
+  text-align: center;
+}

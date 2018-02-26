@@ -1,5 +1,32 @@
+<div class="hero home-hero">
+  <div class="container">
+    <h1>Dashboard</h1>
+    <p class="lead">View all of the blockchain transactions</p>
+  </div>
+</div>
 <div class="container">
-	<div class="jumbotron">
-		<h1>origin-coffee-ui Application</h1>
-	</div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-responsive table-striped">
+        <thead class="thead">
+          <tr class="thead-cols">
+            <th class="info">ID</th>
+
+            <th class="info">Type</th>
+
+            <th class="info">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asset of allAssets">
+            <td>{{asset.transactionId}}</td>
+
+            <td>{{asset.transactionType}}</td>
+
+            <td>{{asset.transactionTimestamp}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

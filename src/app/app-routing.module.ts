@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { TransactionComponent } from './Transaction/Transaction.component'
 import { HomeComponent } from './home/home.component';
-
-import { CoffeeComponent } from './Coffee/Coffee.component';
+import { VendorComponent } from './vendor/vendor.component';
+import { CoopComponent } from './coop/coop.component';
 
 const routes: Routes = [
-    // { path: 'transaction', component: TransactionComponent },
-    {path: '', component: HomeComponent},
-		
-		{ path: 'Coffee', component: CoffeeComponent},
-		
-		{path: '**', redirectTo:''}
+  { path: '', component: HomeComponent },
+  { path: 'coop', component: CoopComponent },
+  { path: 'vendor', component: VendorComponent },
+  { path: '**', redirectTo: '' }
 
 ];
 
